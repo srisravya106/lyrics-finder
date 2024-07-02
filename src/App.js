@@ -3,6 +3,7 @@ import './App.css';
 import Axios from 'axios'; 
 import { useState } from 'react'; 
 import Button from '@mui/material/Button';
+import Input from '@mui/material/Input';
   
 function App() { 
     const [artist, setArtist] = useState(""); 
@@ -45,11 +46,13 @@ function App() {
         <div className="App"> 
             <h1>Find the Lyrics</h1> 
   
-            <input className="inputData" type="text" placeholder='Artist name' onChange={(e) => { setArtist(e.target.value) }} /> 
-            <input className="inputData" type="text" 
+            <Input type="text" placeholder='Artist name' onChange={(e) => { setArtist(e.target.value) }} /> 
+            <span>&nbsp; &nbsp; &nbsp;</span>
+            <Input type="text" 
                 placeholder='Song name'
                 onChange={(e) => { setSong(e.target.value) }} /> 
-
+            <br/>
+            <br/>
             <Button variant="contained" onClick={() => findLyrics()}>Get Lyrics</Button>
             <hr /> 
             <pre>{lyrics}</pre> 
