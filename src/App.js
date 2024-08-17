@@ -5,6 +5,8 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 import Input from '@mui/material/Input';
   
+const Button = require('@mui/material/Button')
+
 function App() { 
     const [artist, setArtist] = useState(""); 
     const [song, setSong] = useState(""); 
