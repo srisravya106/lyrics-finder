@@ -20,7 +20,7 @@ function App() {
             await Axios.get( 
                 `https://api.lyrics.ovh/v1/${artist}/${song}`).then((res,err) => { 
                 if(res.status  >= 200 && res.status <= 300) {
-                    let result = "Hey I found lyrics !!!" + res.data.lyrics;
+                    let result = "Hey I found lyrics !!!!" + res.data.lyrics;
                     console.log(result); 
                     setLyrics(result); 
                 }
